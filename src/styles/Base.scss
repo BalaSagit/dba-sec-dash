@@ -1,0 +1,40 @@
+@import '~react-md/src/scss/react-md';
+
+// $md-light-theme: true;
+$md-light-theme: true;
+$md-primary-color: #ff6f00;
+$md-secondary-color: #ffa040;
+
+
+// .md-toolbar{    
+//     background-color:#00bfa5 ;
+// }
+
+// .md-drawer{    
+//     background-color:#424242 ;
+// }
+
+// .md-list{    
+//     background-color:#424242 ;
+// }
+
+// .md-navigation-drawer-content{    
+//     background-color:#424242 ;
+// }
+// .md-icon{    
+//     color:#00bfa5 ;
+// }
+
+// .md-tile-text--primary{
+//     color: white;
+// }
+// .dbCard{
+//     background-color: violet;
+// }
+// .body{
+//     background-color: white;
+// }
+// $md-card-include:false;
+@include react-md-everything;
+
+// @include react-md-theme-everything($md-light-blue-500, $md-deep-orange-a-200, $md-light-theme, 'custom-theme');

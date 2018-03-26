@@ -1,0 +1,39 @@
+@import '~react-md/src/scss/react-md';
+
+// .md-card{    
+//     background-color:aquamarine ;
+// }
+
+// .cardContent{
+//     color:lightseagreen;
+//     // background-color: white;
+// }
+
+// .code{
+//     color: white;
+// }
+
+// .dbCard{
+//     background-color: white;
+// }
+
+// .md-navigation-drawer-content{
+//     background-color: violet;
+// }
+
+$md-card-title-large-font-size: 10px !default;
+.md-block-centered{
+    background-color:#ffa040;    
+    color: black;
+}
+.cardContent{
+    color: black;
+}
+
+.cardTitle{
+    color: black;    
+}
+.md-card-title{
+    color: black;
+}
+// @include react-md-everything;
