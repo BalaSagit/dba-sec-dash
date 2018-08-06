@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardTitle, CardText, Slider } from 'react-md';
+import { Card, CardTitle, CardText } from 'react-md';
 import '../styles/Cards.scss';
 
 class Cards extends Component {

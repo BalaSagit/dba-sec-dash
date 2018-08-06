@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import loremIpsum from 'lorem-ipsum';
-import { Button, DialogContainer, NavigationDrawer, SVGIcon, FontIcon, Grid, Card, Cell } from 'react-md';
+import { DialogContainer, NavigationDrawer, FontIcon } from 'react-md';
 import '../styles/Drawers.scss';
-import Cards from '../components/Cards.jsx';
-import Charts from './Charts.jsx';
+import Dashboard from './Dashboard.jsx';
 
 class Drawers extends Component {
     constructor() {
@@ -17,7 +14,7 @@ class Drawers extends Component {
         }, {
             key: 'Reports',
             primaryText: 'Reports',
-            leftIcon: <FontIcon>insert_chart</FontIcon>,
+            leftIcon: <FontIcon>insert_chart</FontIcon>,            
         }
         ];
 
@@ -34,7 +31,7 @@ class Drawers extends Component {
         });
 
         this.state = {
-            renderNode: document.getElementById('navigation-drawer-demo'),
+            renderNode: document.getElementById('navigation-drawer'),
             visible: true,
             key: this.navitems[0].key,
             page: this.navitems[0].primaryText,
@@ -62,7 +59,7 @@ class Drawers extends Component {
     };
 
     handleShow = () => {
-        this.setState({ renderNode: document.getElementById('navigation-drawer-demo') });
+        this.setState({ renderNode: document.getElementById('navigation-drawer') });
     };
 
     render() {
@@ -71,8 +68,8 @@ class Drawers extends Component {
             <div>
                 {/* <Button raised onClick={this.show}>Open the Demo</Button> */}
                 <DialogContainer
-                    id="navigation-drawer-demo"
-                    aria-label="Navigation Drawer Demo"
+                    id="navigation-drawer"
+                    aria-label="Navigation Drawer"
                     visible={visible}
                     fullPage
                     focusOnMount={true}
@@ -92,15 +89,9 @@ class Drawers extends Component {
                         contentClassName="md-grid"
                     >
                         <section className='body'>
-                            <Grid className=".md-grid">
-                                <Cell className="md-cell md-cell--4" ><Cards tempProp1='Total Access to Servers' /></Cell>
-                                <Cell className="md-cell md-cell--4" ><Cards tempProp1='Total Access to DBs' /></Cell>
-                                <Cell className="md-cell md-cell--4" ><Cards tempProp1='User Level Access' /></Cell>
-                            </Grid>
-                            {/* <Grid className=".md-grid"> */}
-                                <Cell className="md-cell md-cell--4" ><Charts /></Cell>
-                            {/* </Grid> */}
+                            <Dashboard/>                                                        
                         </section>
+                        
                     </NavigationDrawer>
                 </DialogContainer>
             </div>
